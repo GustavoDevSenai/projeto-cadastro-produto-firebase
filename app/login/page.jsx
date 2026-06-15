@@ -5,6 +5,7 @@ import { signInWithEmailAndPassword } from "firebase/auth"
 import {auth} from '../../firebase/firebaseConfig'
 import Swal from "sweetalert2"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 
 export default function Login(){
@@ -84,6 +85,20 @@ export default function Login(){
                 >
                     Entrar
                 </button>
+
+            <div className="mt-4 text-center">
+                <p className="text-gray-600">
+                    Não possui uma conta?
+                </p>
+
+            <Link
+                href="/cadastroUsuario"
+                className="text-blue-600 hover:text-blue-800 font-semibold"
+            >
+                Criar uma conta
+            </Link>
+            </div>
+
 
             </div>
         
