@@ -12,6 +12,8 @@ export default function Login(){
     const [email,setEmail] = useState("")
     const [senha,setSenha] = useState("")
 
+    const router = useRouter()
+
 
     async function entrar() {
 
@@ -23,13 +25,17 @@ export default function Login(){
                 senha
             )
 
+            
+
             console.log(response.user)
 
             await Swal.fire({
                 title:"Login",
                 text:"Login realizado com sucesso!",
-                icon:"sucess"
+                icon:"success"
             })
+
+            router.push("/cadastro")
 
         } catch (error) {
 
